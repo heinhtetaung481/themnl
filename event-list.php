@@ -101,6 +101,8 @@ endif;
 			<thead>
 				<tr>
 					<?php
+					//commented by hha
+					//to hide date column heading
 					//echo '<th class="data-date">' . __( 'Date', 'sportspress' ) . '</th>';
 
 					switch ( $title_format ) {
@@ -240,7 +242,9 @@ endif;
 						$date_html = '<date>' . get_post_time( 'Y-m-d H:i:s', false, $event ) . '</date>' . apply_filters( 'sportspress_event_date', get_post_time( get_option( 'date_format' ), false, $event, true ), $event->ID );
 
 						if ( $link_events ) $date_html = '<a href="' . get_post_permalink( $event->ID, false, true ) . '" itemprop="url">' . $date_html . '</a>';
-
+						
+						//commented by hha
+						//to hide date data rows
 						//echo '<td class="data-date" itemprop="startDate" content="' . mysql2date( 'Y-m-d\TH:iP', $event->post_date ) . '">' . $date_html . '</td>';
 
 						switch ( $title_format ) {
